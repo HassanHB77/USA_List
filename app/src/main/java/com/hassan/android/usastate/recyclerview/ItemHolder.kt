@@ -2,7 +2,6 @@ package com.hassan.android.usastate.recyclerview
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +18,6 @@ class ItemHolder(view: View, private val activity: Activity) : RecyclerView.View
     init {
         val navController = activity.findNavController(R.id.fragment_host_nav)
         itemView.setOnClickListener {
-            Log.d("Test", "Go to Full details")
             val args = Bundle().apply {
                 putInt(PERSON_ID, item.person.cspanid)
             }
@@ -27,7 +25,7 @@ class ItemHolder(view: View, private val activity: Activity) : RecyclerView.View
         }
     }
 
-    val binding: ListItemBinding = ListItemBinding.bind(view)
+    private val binding: ListItemBinding = ListItemBinding.bind(view)
     fun bind(item: Object) {
         this.item = item
         setImageRepublicanOrDemocrats(item.party, binding.logo, activity)
