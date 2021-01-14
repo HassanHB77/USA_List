@@ -1,4 +1,4 @@
-package com.hassan.android.usastate
+package com.hassan.android.usastate.data
 
 import android.app.Activity
 import com.google.gson.Gson
