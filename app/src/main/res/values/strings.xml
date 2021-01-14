@@ -9,4 +9,8 @@
     <string name="name">Name</string>
     <string name="birthday">Birthday</string>
     <string name="end_date">End Date</string>
+    <string name="website">Website</string>
+    <string name="gender">Gender</string>
+    <string name="sort_name">Sort Name</string>
+    <string name="phone">Phone</string>
 </resources>

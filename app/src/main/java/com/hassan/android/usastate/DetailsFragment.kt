@@ -1,5 +1,6 @@
 package com.hassan.android.usastate
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,6 @@ import com.hassan.android.usastate.data.getMainResponse
 import com.hassan.android.usastate.databinding.FragmentDetailsBinding
 import com.hassan.android.usastate.helper.UiHelper
 import com.hassan.android.usastate.helper.UiHelper.cropImage
-import com.hassan.android.usastate.helper.UiHelper.extractName
 import com.hassan.android.usastate.model.Object
 
 const val PERSON_ID = "PERSON_ID"
@@ -28,6 +28,7 @@ class DetailsFragment : Fragment() {
         targetItem = mainResponse.objects.filter { it.person.cspanid == id }[0]
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,13 +45,13 @@ class DetailsFragment : Fragment() {
         cropImage(binding.callIcon, R.drawable.call_icon, requireActivity())
         cropImage(binding.mailIcon, R.drawable.mail_icon, requireActivity())
 
-        binding.firstLastName.text = extractName(targetItem.person.name)
+        binding.firstLastName.text = "${targetItem.person.firstname} ${targetItem.person.lastname}"
         binding.bioGuideId.text = targetItem.person.bioguideid
         binding.partyDetails.text = targetItem.party
         binding.personLink.text = targetItem.person.link
         binding.address.text = targetItem.extra.address
         binding.office.text = targetItem.extra.office
-        binding.name.text = extractName(targetItem.person.name)
+        binding.name.text = "${targetItem.person.firstname} ${targetItem.person.lastname}"
         binding.birthday.text = targetItem.person.birthday
         binding.endDate.text = targetItem.enddate
 

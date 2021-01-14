@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hassan.android.usastate.PERSON_ID
 import com.hassan.android.usastate.R
 import com.hassan.android.usastate.databinding.ListItemBinding
-import com.hassan.android.usastate.helper.UiHelper.extractName
 import com.hassan.android.usastate.helper.UiHelper.setImageRepublicanOrDemocrats
 import com.hassan.android.usastate.model.Object
 
@@ -34,7 +33,7 @@ class ItemHolder(view: View, private val activity: Activity) : RecyclerView.View
         setImageRepublicanOrDemocrats(item.party, binding.logo, activity)
         binding.description.text = item.description
         binding.party.text = item.party
-        val onlyName = extractName(item.person.name)
+        val onlyName = "${item.person.firstname} ${item.person.lastname}"
         binding.senatorName.text = onlyName
     }
 }

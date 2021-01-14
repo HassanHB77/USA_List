@@ -6,9 +6,6 @@ import com.bumptech.glide.Glide
 import com.hassan.android.usastate.R
 
 object UiHelper{
-    fun extractName(nameWithDetails: String): String{
-        return nameWithDetails.substring(5, nameWithDetails.indexOf('['))
-    }
 
     fun cropImage(imageView: ImageView, src: Int, activity: Activity){
         Glide.with(activity)
