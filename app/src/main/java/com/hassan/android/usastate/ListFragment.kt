@@ -34,7 +34,7 @@ class ListFragment : Fragment() {
 
         binding.recyclerView.apply {
             layoutManager = GridLayoutManager(requireContext(), 1)
-            adapter = ItemAdaptor(mainResponse.objects, requireContext())
+            adapter = ItemAdaptor(mainResponse.objects, requireActivity())
         }
 
         return binding.root
