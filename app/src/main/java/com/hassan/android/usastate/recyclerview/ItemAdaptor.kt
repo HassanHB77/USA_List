@@ -1,10 +1,10 @@
-package com.hassan.android.usastate
+package com.hassan.android.usastate.recyclerview
 
 import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.hassan.android.usastate.R
 import com.hassan.android.usastate.model.Object
 
 class ItemAdaptor(private val listOfItems: List<Object>, private val activity: Activity) :

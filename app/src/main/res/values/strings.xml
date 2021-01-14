@@ -2,4 +2,11 @@
     <string name="app_name">USAState</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading...</string>
+    <string name="role">Role</string>
+    <string name="address">Address</string>
+    <string name="office">Office</string>
+    <string name="name">Name</string>
+    <string name="birthday">Birthday</string>
+    <string name="end_date">End Date</string>
 </resources>

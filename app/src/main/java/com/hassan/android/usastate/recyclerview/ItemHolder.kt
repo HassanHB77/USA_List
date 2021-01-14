@@ -1,13 +1,14 @@
-package com.hassan.android.usastate
+package com.hassan.android.usastate.recyclerview
 
 import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.hassan.android.usastate.PERSON_ID
+import com.hassan.android.usastate.R
 import com.hassan.android.usastate.databinding.ListItemBinding
 import com.hassan.android.usastate.model.Object
 

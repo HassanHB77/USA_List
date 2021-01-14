@@ -6,7 +6,7 @@
     android:background="@color/screen_background">
 
     <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-        android:id="@+id/circularRevealCardView"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
